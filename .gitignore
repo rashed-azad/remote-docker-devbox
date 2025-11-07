@@ -1,0 +1,46 @@
+# =========================
+# Docker
+# =========================
+# Ignore all container logs, build artifacts, and temporary files
+docker-compose.override.yml
+docker-compose.override.yml.*.bak
+*.log
+*.tmp
+*.pid
+*.swp
+
+# Ignore Docker build cache and temp files
+.docker/
+docker-cache/
+docker-compose.override.env
+docker-compose.override.override.yml
+
+# Ignore local image tarballs
+*.tar
+
+# =========================
+# MacOS
+# =========================
+# Finder metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external volumes
+.Spotlight-V100
+.Trashes
+.VolumeIcon.icns
+
+# MacOS Finder tags
+*.icloud
+
+# =========================
+# General
+# =========================
+# Ignore editor temporary files
+*~
+*.swp
+*.swo
