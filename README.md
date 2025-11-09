@@ -1,4 +1,3 @@
-````markdown
 # Remote Devbox Docker Setup
 
 This repository contains a **Debian-based remote development Docker image** with SSH access, Python 3.11, essential development tools, and common utilities. Perfect for coding, testing, and remote development from any host machine.

@@ -1,4 +1,3 @@
-````markdown
 # CLion Remote Development Setup with Docker
 
 This guide explains step by step how to configure CLion to use a Docker-based Debian development environment for remote C/C++ development.
