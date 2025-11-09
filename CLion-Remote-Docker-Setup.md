@@ -14,7 +14,7 @@ This guide explains step by step how to configure CLion to use a Docker-based De
 
 ## 2. Run the Docker Container
 
-Assuming you have built the Docker image named `remote-docker-devbox`:
+Assuming you have built the Docker image named `remote-devbox`:
 
 ```bash
 # Run the container in detached mode, with SSH port and persistent project folder
@@ -23,7 +23,7 @@ docker run -d \
     -p 2222:22 \
     -v ~/Documents:/home/rashed/Documents \
     --name remote-devbox \
-    remote-docker-devbox
+    remote-devbox
 ````
 
 * **-d**: Run in background
