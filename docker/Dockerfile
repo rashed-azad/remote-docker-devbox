@@ -25,7 +25,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y \
         # Basic shell utilities
-        bash vim nano curl git unzip tar gzip bzip2 xz-utils \
+        bash vim nano curl git bash-completion unzip tar gzip bzip2 xz-utils \
         htop less man dialog \
         # Networking and SSH
         openssh-server openssh-client net-tools iputils-ping \
