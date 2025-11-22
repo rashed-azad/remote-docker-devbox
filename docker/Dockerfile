@@ -38,6 +38,19 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*  # Clean up APT cache to reduce image size
 
 # -------------------------------------------------------------
+# Install LLVM/Clang 17 (Minimal, Manual)
+# -------------------------------------------------------------
+RUN mkdir -p /etc/apt/keyrings && \
+    curl -fsSL https://apt.llvm.org/llvm-snapshot.gpg.key \
+        | gpg --dearmor -o /etc/apt/keyrings/llvm.gpg && \
+    echo "deb [signed-by=/etc/apt/keyrings/llvm.gpg] http://apt.llvm.org/bookworm/ llvm-toolchain-bookworm-17 main" \
+        > /etc/apt/sources.list.d/llvm.list && \
+    apt-get update && \
+    apt-get install -y clang-17 && \
+    update-alternatives --install /usr/bin/clang clang /usr/bin/clang-17 100 && \
+    update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-17 100
+
+# -------------------------------------------------------------
 # Locale Configuration
 # -------------------------------------------------------------
 # Enable en_US.UTF-8 locale
